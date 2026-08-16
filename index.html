@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Interactive evaluation lab for FlowPilot PromptGuard." />
+    <title>FlowPilot PromptGuard - Evaluation Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav" aria-label="Project navigation">
+        <a class="brand" href="#top" aria-label="FlowPilot PromptGuard home">
+          <span class="brand-mark" aria-hidden="true">FP</span>
+          <span>FlowPilot PromptGuard</span>
+        </a>
+        <div class="nav-links">
+          <a href="https://github.com/dominodu0828/flowpilot-promptguard-evaluation">GitHub</a>
+          <a href="https://flowpilot-demo.onrender.com/preview">Parent demo</a>
+        </div>
+      </nav>
+
+      <div class="hero-copy" id="top">
+        <p class="eyebrow">Reverie Hacks 2026 · ML Prompt Engineering</p>
+        <h1>Can a prompt keep money safe?</h1>
+        <p class="lede">
+          Structured prompts guide the agent. A deterministic gate decides
+          whether an attempted payment may reach the side effect.
+        </p>
+        <div class="metric-grid" aria-label="Evaluation summary">
+          <article class="metric">
+            <strong>8/8</strong>
+            <span>documented behaviors reproduced</span>
+          </article>
+          <article class="metric safe">
+            <strong>7/8</strong>
+            <span>safety targets met</span>
+          </article>
+          <article class="metric warning">
+            <strong>1</strong>
+            <span>known limitation disclosed</span>
+          </article>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section workflow-section" aria-labelledby="workflow-title">
+        <div class="section-heading">
+          <p class="eyebrow">Workflow</p>
+          <h2 id="workflow-title">Human input, model reasoning, code boundary</h2>
+          <p>Every stage narrows the next. The final decision is not a prompt.</p>
+        </div>
+        <img class="workflow" src="workflow.png" alt="FlowPilot PromptGuard workflow from user request through Claude Opus 5 prompts, human confirmation, screening, policy gate, and testnet execution." />
+      </section>
+
+      <section class="section lab" aria-labelledby="lab-title">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive samples</p>
+          <h2 id="lab-title">Run the eight adversarial cases</h2>
+          <p>Select a case to inspect the same attempted action under two execution boundaries.</p>
+        </div>
+
+        <div class="lab-layout">
+          <div class="case-list" id="case-list" role="list" aria-label="Evaluation cases"></div>
+          <article class="case-detail" aria-live="polite">
+            <div class="detail-header">
+              <div>
+                <p class="case-category" id="case-category"></p>
+                <h3 id="case-title"></h3>
+              </div>
+              <span class="status-pill" id="case-status"></span>
+            </div>
+
+            <p class="description" id="case-description"></p>
+
+            <div class="message-card">
+              <span>Latest user message</span>
+              <blockquote id="case-message"></blockquote>
+            </div>
+
+            <div class="attempt-grid">
+              <div><span>Attempted amount</span><strong id="case-amount"></strong></div>
+              <div><span>Recipient</span><code id="case-recipient"></code></div>
+              <div><span>Screened this turn</span><strong id="case-screened"></strong></div>
+            </div>
+
+            <div class="comparison-grid">
+              <section class="condition danger">
+                <p class="condition-label">One broad prompt</p>
+                <h4>Prompt-only boundary</h4>
+                <p>The tool call reaches execution without an external validator.</p>
+                <div class="outcome" id="baseline-outcome"></div>
+              </section>
+              <section class="condition protected">
+                <p class="condition-label">Structured workflow</p>
+                <h4>PromptGuard</h4>
+                <p>Exact confirmation, current-turn screening, and execution limits run in code.</p>
+                <div class="outcome" id="guard-outcome"></div>
+              </section>
+            </div>
+
+            <div class="explanation" id="case-explanation"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section evidence" aria-labelledby="evidence-title">
+        <div class="section-heading">
+          <p class="eyebrow">Judge evidence</p>
+          <h2 id="evidence-title">Review the result without exposing private source</h2>
+        </div>
+        <div class="download-panel">
+          <a href="FlowPilot-PromptGuard-Technical-Documentation.pdf">Technical documentation PDF</a>
+          <a href="FlowPilot-PromptGuard-Sample-Comparison.pdf">Same-case comparison PDF</a>
+        </div>
+        <p class="fine-print">
+          This public repository contains only the static evaluation interface
+          and judge documents. The implementation remains private. No model
+          outputs are fabricated. Testnet only; no real funds.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built as a disclosed extension of the FlowPilot parent project.</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
