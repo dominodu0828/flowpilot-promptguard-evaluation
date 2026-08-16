@@ -1,7 +1,7 @@
-# FlowPilot PromptGuard - Public Evaluation
+# PromptGuard - Public Evaluation
 
-This repository is the public, static evaluation surface for the FlowPilot
-PromptGuard submission to the Reverie Hacks 2026 ML Prompt Engineering track.
+This repository is the public, static evaluation surface for the PromptGuard
+submission to the Reverie Hacks 2026 ML Prompt Engineering track.
 
 ## What is included
 
