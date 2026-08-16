@@ -19,7 +19,7 @@ are not included here. The page contains no backend and performs no transfer.
 
 ## Public links
 
-- Evaluation lab: <https://dominodu0828.github.io/flowpilot-promptguard-evaluation/>
+- Evaluation lab: <https://dominodu0828.github.io/promptguard-evaluation/>
 - Parent product preview: <https://flowpilot-demo.onrender.com/preview>
 
 ## Reported result
